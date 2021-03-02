@@ -9,7 +9,7 @@
 Modular Telegram bot for managing your groups with a extras features with HunterxHunter theme
 
 # Deploy To Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Akasuki-1/Mia-Khalifa-Bot.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Akasuki-1/test-bot.git)
 
 ### Configuration
 
