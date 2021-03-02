@@ -3,13 +3,15 @@
 <p align="center">
 <img src="https://telegra.ph/file/ea244ee97bb0babac0223.jpg" alt="Anji kiccha bot">
 
-[![Open Source Love](https://img.shields.io/badge/Find-on%20Telegram-blue.svg?logo=telegram)](https://telegram.dog/Mia-Khalifa-Bot)  
+[![Open Source Love](https://img.shields.io/badge/Find-on%20Telegram-blue.svg?logo=telegram)](https://telegram.dog/Mia)  
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 Modular Telegram bot for managing your groups with a extras features with HunterxHunter theme
 
 # Deploy To Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Akasuki-1/test-bot.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Akasuki-1/test-bot1.git)
+ 
+ ![Fun](https://www.animatedimages.org/data/media/1026/animated-bugs-bunny-image-0035.gif)
 
 ### Configuration
 
