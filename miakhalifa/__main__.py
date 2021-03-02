@@ -29,7 +29,7 @@ from miakhalifa.modules.connection import connect_button
 PM_START_TEXT = """
 _Hello_ *{}*
 _My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
-
+ㅤㅤPʟs ɴᴏᴛᴇ:  ᴛʜɪs ʀᴇᴘᴏ ɪs ʙᴀsᴇᴅ ᴏɴ MɪᴀKʜᴀʟɪғᴀ Bᴏᴛ.
 _Maintained by_ [{}](tg://user?id={})
 """
 
