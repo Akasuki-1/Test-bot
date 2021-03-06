@@ -129,7 +129,8 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_photo(DEVIL_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_USERNAME ),reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="➕ Add To Your Group ➕",url="http://t.me/AnjiKicchaNewBot?startgroup=true")],
                                                 [InlineKeyboardButton(text="My Owner 🇮🇳",url="https://t.me/Akboy99"),InlineKeyboardButton(text="creator ",url="https://t.me/The_NOoBHaCkeR")],  
-                                                [InlineKeyboardButton(text="Help 🤝",url="t.me/{}?start=help".format(bot.username))]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
+                                                [InlineKeyboardButton(text="Help 🤝",url="t.me/{}?start=help".format(bot.username))],
+                                                [InlineKeyboardButton('🔐Close', callback_data="close")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
     else:
          
 
