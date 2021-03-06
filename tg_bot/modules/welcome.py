@@ -9,20 +9,20 @@ from telegram.error import BadRequest
 from telegram.ext import MessageHandler, Filters, CommandHandler, run_async, CallbackQueryHandler
 from telegram.utils.helpers import mention_markdown, mention_html, escape_markdown
 
-import miakhalifa.modules.sql.welcome_sql as sql
-import miakhalifa.modules.sql.global_bans_sql as gbansql
-import miakhalifa.modules.sql.users_sql as userssql
-import miakhalifa.modules.sql.feds_sql as feds_sql
+import tg_bot.modules.sql.welcome_sql as sql
+import tg_bot.modules.sql.global_bans_sql as gbansql
+import tg_bot.modules.sql.users_sql as userssql
+import tg_bot.modules.sql.feds_sql as feds_sql
 
-from miakhalifa import dispatcher, OWNER_ID, LOGGER, SUDO_USERS, SUPPORT_USERS, DEV_USERS, WHITELIST_USERS, MESSAGE_DUMP
-from miakhalifa.modules.helper_funcs.chat_status import user_admin, can_delete, is_user_ban_protected
-from miakhalifa.modules.helper_funcs.misc import build_keyboard, revert_buttons, send_to_list
-from miakhalifa.modules.helper_funcs.msg_types import get_welcome_type
-from miakhalifa.modules.helper_funcs.extraction import extract_user
-from miakhalifa.modules.disable import DisableAbleCommandHandler
-from miakhalifa.modules.helper_funcs.filters import CustomFilters
-from miakhalifa.modules.helper_funcs.string_handling import markdown_parser, escape_invalid_curly_brackets
-from miakhalifa.modules.log_channel import loggable
+from tg_bot import dispatcher, OWNER_ID, LOGGER, SUDO_USERS, SUPPORT_USERS, DEV_USERS, WHITELIST_USERS, MESSAGE_DUMP
+from tg_bot.modules.helper_funcs.chat_status import user_admin, can_delete, is_user_ban_protected
+from tg_bot.modules.helper_funcs.misc import build_keyboard, revert_buttons, send_to_list
+from tg_bot.modules.helper_funcs.msg_types import get_welcome_type
+from tg_bot.modules.helper_funcs.extraction import extract_user
+from tg_bot.modules.disable import DisableAbleCommandHandler
+from tg_bot.modules.helper_funcs.filters import CustomFilters
+from tg_bot.modules.helper_funcs.string_handling import markdown_parser, escape_invalid_curly_brackets
+from tg_bot.modules.log_channel import loggable
 
 VALID_WELCOME_FORMATTERS = ['first', 'last', 'fullname', 'username', 'id', 'count', 'chatname', 'mention']
 
