@@ -130,12 +130,32 @@ def start(bot: Bot, update: Update, args: List[str]):
                                                 [[InlineKeyboardButton(text="➕ Add To Your Group ➕",url="http://t.me/AnjiKicchaNewBot?startgroup=true")],
                                                 [InlineKeyboardButton(text="My Owner 🇮🇳",url="https://t.me/Akboy99"),InlineKeyboardButton(text="creator ",url="https://t.me/The_NOoBHaCkeR")],  
                                                 [InlineKeyboardButton(text="Help 🤝",url="t.me/{}?start=help".format(bot.username))],
-                                                [InlineKeyboardButton('🔐Close', callback_data="close")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
+                                                [InlineKeyboardButton('❗About', callback_data="about")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
     else:
          
 
         update.effective_message.reply_text("Heya, How can I help you? 🙂",reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="🤝 Help",url="t.me/{}?start=help".format(bot.username)),InlineKeyboardButton(text="My Owner 🇮🇳",url="https://t.me/Akboy99")]]))
+                                                [[InlineKeyboardButton(text="🤝 Help",url="t.me/{}?start=help".format(bot.username)),InlineKeyboardButton(text="My Owner 🇮🇳",url="https://t.me/Akboy99")]])),
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["about"]))
+async def about_me(bot, update):
+    # logger.info(update)
+    TRChatBase(update.from_user.id, update.text, "/about")
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text=Translation.ABOUT_ME,
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('🔙Back', callback_data="help_back"),
+                    InlineKeyboardButton('🔐Close', callback_data="close")
+                ]
+            ]
+        )
+        reply_to_message_id=update.message_id
+    )
                                   
 # for test purposes
 def error_callback(bot, update, error):
