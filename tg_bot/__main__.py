@@ -130,7 +130,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                                                 [[InlineKeyboardButton(text="➕ Add To Your Group ➕",url="http://t.me/AnjiKicchaNewBot?startgroup=true")],
                                                 [InlineKeyboardButton(text="My Owner 🇮🇳",url="https://t.me/Akboy99"),InlineKeyboardButton(text="creator ",url="https://t.me/The_NOoBHaCkeR")],  
                                                 [InlineKeyboardButton(text="Help 🤝",url="t.me/{}?start=help".format(bot.username))],
-                                                [InlineKeyboardButton('❗About', callback_data="about")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
+                                                [InlineKeyboardButton('❗About', callback_data="aboutmanu_howto")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
     else:
          
 
@@ -201,6 +201,28 @@ def help_button(bot: Bot, update: Update):
             query.message.reply_text(text=HELP_STRINGS,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help")))
+
+elif query.data == "aboutmanu_howto":
+        query.message.edit_text(
+            text=f"* ｢ BASIC HELP 」*"
+            f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
+            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [Pruthvi_RJ_Group™](https://t.me/Pruthvi_Rj_Group).\n"
+            f"",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="text=" ⚠️ Help ",url="t.me/{}?start=help".format(bot.username)
+                        ),
+                        InlineKeyboardButton(
+                            text="Owner",url="t.me/Akboy99"
+                        ),
+                    ],
+                    [InlineKeyboardButton(text="Back", callback_data="")],
+                ]
+            )
 
         # ensure no spinny white circle
         bot.answer_callback_query(query.id)
