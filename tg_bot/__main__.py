@@ -19,14 +19,14 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 
-Hello {},My Name is {} !. 
+```Hello {},My Name is {} !. 
 
-I'm Filter Manager Bot Owned By \n \n [{}](https://t.me/{}). 
+I'm Filter Manager Bot Owned By           [{}](https://t.me/{})```. 
 
 """
 
 HELP_STRINGS = """
-Hello! my name is *{}*.
+```Hello! my name is *{}*```.
 
 *Main Available Commands* are Below:
 
