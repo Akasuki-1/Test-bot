@@ -2,7 +2,7 @@ import html, time
 import re
 from typing import Optional, List
 
-import miakhalifa.modules.helper_funcs.cas_api as cas
+import tg_bot.modules.helper_funcs.cas_api as cas
 
 from telegram import Message, Chat, Update, Bot, User, CallbackQuery, ChatMember, ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, MessageEntity
 from telegram.error import BadRequest
