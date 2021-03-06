@@ -220,7 +220,7 @@ elif query.data == "aboutmanu_howto":
                             text="Owner",url="t.me/Akboy99"
                         ),
                     ],
-                    [InlineKeyboardButton(text="Back", callback_data="")],
+                    [InlineKeyboardButton(text="Back", callback_data="help_back")],
                 ]
             )
 
