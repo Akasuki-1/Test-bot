@@ -1,6 +1,7 @@
 import logging
 import os
 import sys
+from config import API_HASH, API_ID, BOT_TOKEN
 
 import telegram.ext as tg
 
