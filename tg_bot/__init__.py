@@ -1,7 +1,7 @@
 import logging
 import os
 import sys
-from config import API_HASH, API_ID, BOT_TOKEN
+from config import API_HASH, API_ID, TOKEN
 
 import telegram.ext as tg
 
@@ -103,8 +103,9 @@ else:
     BAN_STICKER = Config.BAN_STICKER
     ALLOW_EXCL = Config.ALLOW_EXCL
     STRICT_GMUTE = Config.STRICT_GMUTE
-    api_hash=API_HASH,
-        api_id=API_ID
+
+    api_hash=API_HASH
+    api_id=API_ID
 
 SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(861055237)
