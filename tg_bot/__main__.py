@@ -356,7 +356,7 @@ def get_settings(bot: Bot, update: Update):
 
 
 @run_async
-def donate(bot: Bot, update: Update):
+def song(bot: Bot, update: Update):
     user = update.effective_message.from_user
     chat = update.effective_chat  # type: Optional[Chat]
 
