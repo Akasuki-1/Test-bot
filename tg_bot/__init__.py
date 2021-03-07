@@ -103,7 +103,8 @@ else:
     BAN_STICKER = Config.BAN_STICKER
     ALLOW_EXCL = Config.ALLOW_EXCL
     STRICT_GMUTE = Config.STRICT_GMUTE
-   
+    api_hash=API_HASH,
+        api_id=API_ID
 
 SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(861055237)
