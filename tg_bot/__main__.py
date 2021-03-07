@@ -21,7 +21,7 @@ PM_START_TEXT = """
 
 ```Hello {},My Name is {} !. 
 
-I'm Filter Manager Bot Owned By           [{}](https://t.me/{})```. 
+I'm Filter Manager Bot Owned By ```          [{}](https://t.me/{}). 
 
 """
 
