@@ -280,22 +280,6 @@ def send_settings(chat_id, user_id, user=False):
 
 
 @run_async
-def PODAI_about_callback(update, context):
-    query = update.callback_query
-    if query.data == "aboutmanu_":
-        update.effective_message.reply_photo(
-                PODA_IMG1,
-                parse_mode=ParseMode.MARKDOWN,
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                [
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
-                ]
-                )
-
-
-
-@run_async
 def settings_button(bot: Bot, update: Update):
     query = update.callback_query
     user = update.effective_user
@@ -381,6 +365,19 @@ def get_settings(bot: Bot, update: Update):
 
     else:
         send_settings(chat.id, user.id, True)
+
+
+@run_async
+def PODAI_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "aboutmanu_":
+        update.effective_message.reply_photo(
+                PODA_IMG1,
+                parse_mode=ParseMode.MARKDOWN,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup(
+                                         [[InlineKeyboardButton(text="Back",
+                                                                callback_data="aboutmanu_back)]]))
 
 
 @run_async
