@@ -51,6 +51,19 @@ USER_SETTINGS = {}
 
 DEVIL_IMG=START_PHOTTO
 
+PODA_IMG1 = "https://telegra.ph/file/5676359ac1bfb83b9f43b.jpg"
+
+PODA_IMG2 = "https://telegra.ph/file/0d4de8335e7bfd3aaab26.jpg"
+
+PODA_IMG3 = "https://telegra.ph/file/73e6306b4ab797a193112.jpg"
+
+PODA_IMG4 = "https://telegra.ph/file/e05eac555667620c78c0a.jpg"
+
+PODA_IMG5 = "https://telegra.ph/file/fa5987927d2d39aac288e.jpg"
+
+PODA_IMG6 = "https://telegra.ph/file/ff1e6ce577cbc289fc321.jpg"
+
+
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("tg_bot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
