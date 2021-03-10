@@ -130,6 +130,7 @@ def PODAI_about_callback(update, context):
                 ]
                 )
 
+
 @run_async
 def start(bot: Bot, update: Update, args: List[str]):
     if update.effective_chat.type == "private":
