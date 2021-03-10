@@ -116,6 +116,19 @@ def test(bot: Bot, update: Update):
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
 
+@run_async
+def PODAI_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "aboutmanu_":
+        update.effective_message.reply_photo(
+                PODA_IMG1,
+                parse_mode=ParseMode.MARKDOWN,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup(
+                [
+                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
+                ]
+                )
 
 @run_async
 def start(bot: Bot, update: Update, args: List[str]):
@@ -417,6 +430,10 @@ def main():
 
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
+
+    about_callback_handler = CallbackQueryHandler(
+        PODAI_about_callback, pattern=r"aboutmanu_"
+    )
 
     donate_handler = CommandHandler("song", song)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
