@@ -374,7 +374,7 @@ def PODAI_about_callback(update, context):
         update.effective_message.reply_photo(
                 PODA_IMG1,
                 parse_mode=ParseMode.MARKDOWN,
-                disable_web_page_preview=True
+                disable_web_page_preview=True)
                 
 
 @run_async
