@@ -116,20 +116,6 @@ def test(bot: Bot, update: Update):
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
 
-@run_async
-def PODAI_about_callback(update, context):
-    query = update.callback_query
-    if query.data == "aboutmanu_":
-        update.effective_message.reply_photo(
-                PODA_IMG1,
-                parse_mode=ParseMode.MARKDOWN,
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                [
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
-                ]
-                )
-
 
 @run_async
 def start(bot: Bot, update: Update, args: List[str]):
@@ -291,6 +277,22 @@ def send_settings(chat_id, user_id, user=False):
             dispatcher.bot.send_message(user_id, "Seems like there aren't any chat settings available :'(\nSend this "
                                                  "in a group chat you're admin in to find its current settings!",
                                         parse_mode=ParseMode.MARKDOWN)
+
+
+@run_async
+def PODAI_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "aboutmanu_":
+        update.effective_message.reply_photo(
+                PODA_IMG1,
+                parse_mode=ParseMode.MARKDOWN,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup(
+                [
+                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
+                ]
+                )
+
 
 
 @run_async
