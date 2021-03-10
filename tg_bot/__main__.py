@@ -375,9 +375,7 @@ def PODAI_about_callback(update, context):
                 PODA_IMG1,
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="Back",
-                                                                callback_data="aboutmanu_back)]]))
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back", callback_data="aboutmanu_back)]]))
 
 
 @run_async
