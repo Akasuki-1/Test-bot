@@ -63,7 +63,6 @@ PODA_IMG5 = "https://telegra.ph/file/fa5987927d2d39aac288e.jpg"
 
 PODA_IMG6 = "https://telegra.ph/file/ff1e6ce577cbc289fc321.jpg"
 
-
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("tg_bot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
