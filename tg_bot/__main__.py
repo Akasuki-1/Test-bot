@@ -49,7 +49,7 @@ DATA_EXPORT = []
 CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
-DEVIL_IMG=START_PHOTTO
+DEVIL_IMG = "https://telegra.ph/file/73e6306b4ab797a193112.jpg"
 
 PODA_IMG1 = "https://telegra.ph/file/5676359ac1bfb83b9f43b.jpg"
 
