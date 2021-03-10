@@ -141,6 +141,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_photo(DEVIL_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_USERNAME ),reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="➕ Add To Your Group ➕",url="http://t.me/AnjiKicchaNewBot?startgroup=true")],
                                                 [InlineKeyboardButton(text="My Owner 🇮🇳",url="https://t.me/Akboy99"),InlineKeyboardButton(text="creator ",url="https://t.me/The_NOoBHaCkeR")],  
+                                                [[InlineKeyboardButton(text="special image", callback_data="aboutmanu_")],
                                                 [InlineKeyboardButton(text="Help 🤝",url="t.me/{}?start=help".format(bot.username))],
                                                 [InlineKeyboardButton(text="photo1",url="https://telegra.ph/file/5676359ac1bfb83b9f43b.jpg"),InlineKeyboardButton(text="2 ",url="https://telegra.ph/file/0d4de8335e7bfd3aaab26.jpg"),InlineKeyboardButton(text="3",url="https://telegra.ph/file/73e6306b4ab797a193112.jpg"),InlineKeyboardButton(text="4 ",url="https://telegra.ph/file/e05eac555667620c78c0a.jpg"),InlineKeyboardButton(text="5",url="https://telegra.ph/file/fa5987927d2d39aac288e.jpg"),InlineKeyboardButton(text="6",url="https://telegra.ph/file/ff1e6ce577cbc289fc321.jpg")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
     else:
