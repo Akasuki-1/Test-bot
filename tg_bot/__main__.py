@@ -1,5 +1,9 @@
 import importlib
 import re
+import sqlite3
+import pyrogram
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
 from typing import Optional, List
 
 from telegram import Message, Chat, Update, Bot, User
@@ -367,6 +371,20 @@ def get_settings(bot: Bot, update: Update):
     else:
         send_settings(chat.id, user.id, True)
 
+
+@pyrogram.Client.on_message(pyrogram.Filters.command(["me"]))
+async def get_me_info(bot, update):
+    # logger.info(update)
+    TRChatBase(update.from_user.id, update.text, "/me")
+    chat_id = str(update.from_user.id)
+    chat_id, plan_type, expires_at = GetExpiryDate(chat_id)
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text=Translation.CURENT_PLAN_DETAILS.format(chat_id, plan_type, expires_at),
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
 
 
 @run_async
