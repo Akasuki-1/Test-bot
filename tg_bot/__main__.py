@@ -455,6 +455,7 @@ def main():
     about_callback_handler = CallbackQueryHandler(
         DaisyX_about_callback, pattern=r"aboutmanu_"
     )
+
     donate_handler = CommandHandler("song", song)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
@@ -466,6 +467,7 @@ def main():
     dispatcher.add_handler(settings_callback_handler)
     dispatcher.add_handler(migrate_handler)
     dispatcher.add_handler(donate_handler)
+    dispatcher.add_handler(about_callback_handler)
 
     # dispatcher.add_error_handler(error_callback)
 
