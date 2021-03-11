@@ -369,13 +369,36 @@ def get_settings(bot: Bot, update: Update):
 
 
 @run_async
-def PODAI_about_callback(update, context):
+def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
-        update.effective_message.reply_photo(
-                PODA_IMG1,
-                parse_mode=ParseMode.MARKDOWN,
-                disable_web_page_preview=True)
+        query.message.edit_text(
+            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by _.* "
+            f"\n\nJoin [Pruthvi_Rj_Group](https:/t.me/Pruthvi_Rj_Group) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥."
+            f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
+            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/8b420d3844833b31f16cc.jpg)"
+            f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="𝗛𝗼𝘄 𝗧𝗼 𝗨𝘀𝗲 𝗠𝗲", callback_data="aboutmanu_howto"
+                        ),
+                        InlineKeyboardButton(
+                            text="𝗠𝗲", callback_data="aboutmanu_tac"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="𝗛𝗲𝗹𝗽", callback_data="help_back"
+                        )
+                    ],
+                    [InlineKeyboardButton(text="𝗕𝗮𝗰𝗸", callback_data="aboutmanu_back")],
+                ]
+            ),
+        )
                 
 
 @run_async
@@ -430,9 +453,8 @@ def main():
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
     about_callback_handler = CallbackQueryHandler(
-        PODAI_about_callback, pattern=r"aboutmanu_"
+        DaisyX_about_callback, pattern=r"aboutmanu_"
     )
-
     donate_handler = CommandHandler("song", song)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
